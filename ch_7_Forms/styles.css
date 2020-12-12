@@ -15,12 +15,15 @@ input {
     margin: 10px auto;
 } 
 
+:focus{
+    outline: none;
+}
+
+
 .error {
-    color: red;
-    background-color: white;
+    border: 2px solid crimson;
 }
 
 .success {
-    color: green;
-    background-color: white;
+    border: 2px solid limegreen;
 }
