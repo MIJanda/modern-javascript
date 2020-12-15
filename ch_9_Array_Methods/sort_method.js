@@ -1,3 +1,4 @@
+'use strict'
 // sort() is destructive
 // sorts lexicographically
 
