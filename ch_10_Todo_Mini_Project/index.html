@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Todos</title>
+</head>
+<body>
+    <div class="container py-1">
+        <header class="text-center text-light py-4">
+            <h1 class="mb-4">Todo List</h1>
+            <form class="search">
+                <input type="text" class="form-control" name="search" placeholder="Search todo">
+            </form>
+        </header>
+        <section>
+            <ul class="list-group todos text-light mx-auto">
+                <!-- <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span>Cook up some beats</span>
+                    <i class="far fa-trash-alt delete"></i>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span>Vocal Exercises</span>
+                    <i class="far fa-trash-alt delete"></i>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span>Programming</span>
+                    <i class="far fa-trash-alt delete"></i>
+                </li> -->
+            </ul>
+        </section>
+        <section>
+            <form class="add text-center">
+                <label class="text-light my-4">Add a new todo...</label>
+                <input type="text" class="form-control" name="add">
+            </form>
+        </section>
+
+        <!-- todo: attach footer to the bottom of the page -->
+        <!-- <footer class="container">
+            <p class="text-light text-center">Ninja Todos &copy; 2020</p>
+        </footer> -->
+
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
