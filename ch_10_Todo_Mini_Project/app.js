@@ -2,6 +2,7 @@
 
 const addForm = document.querySelector('.add');
 const todos = document.querySelector('.todos');
+const search = document.querySelector('.search input');
 
 const generateTemplate = todo => {
         todos.innerHTML += `
@@ -30,5 +31,23 @@ todos.addEventListener('click', e => {
     if (e.target.classList.contains('delete')) {
         e.target.parentElement.remove();
     }
+});
+
+const filterTodos = term => {
+    const todoItems = Array.from(todos.children);
+
+    todoItems
+        .filter(todo => !todo.textContent.toLowerCase().includes(term))
+        .forEach(todo => todo.classList.add('d-none'));
+
+    todoItems
+        .filter(todo => todo.textContent.toLowerCase().includes(term))
+        .forEach(todo => todo.classList.remove('d-none'));
+};
+
+search.addEventListener('keyup', e => {
+    const searchTerm = e.target.value.toLowerCase();
+    
+    filterTodos(searchTerm);
 });
 
