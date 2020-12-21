@@ -23,23 +23,30 @@ class User {
 }
 
 class Admin extends User {
+    constructor(username, email, role) {
+        super(username, email);
+        this.role = role;
+    }
+
     deleteUser(user) {
         users = users.filter(u => u.username !== user.username);
     }
 }
 
-const userOne = new User('mario', 'mario@classes.co.ug');
-userOne.login().incScore().incScore().logout();
+// const userOne = new User('mario', 'mario@classes.co.ug');
+// userOne.login().incScore().incScore().logout();
 
-const userTwo = new User('luigi', 'luigi@classes.co.ug');
-userTwo.login().incScore().logout();
+// const userTwo = new User('luigi', 'luigi@classes.co.ug');
+// userTwo.login().incScore().logout();
 
-const userThree = new Admin('kurta', 'kurta@classes.co.ug');
+const userThree = new Admin('kurta', 'kurta@classes.co.ug', 'black-belt-ninja');
 
-let users = [userOne, userTwo, userThree];
+// let users = [userOne, userTwo, userThree];
 
-console.log(users);
+// console.log(users);
 
-userThree.deleteUser(userOne);
+// userThree.deleteUser(userOne);
 
-console.log(users);
+// console.log(users);
+
+console.log(userThree);
