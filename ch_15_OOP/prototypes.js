@@ -23,3 +23,23 @@ const userTwo = new User('chun-li', 'chun@proto.co.ug');
 console.log(userOne, userTwo);
 
 userTwo.login().logout();
+
+function Admin(username, email, role) {
+    User.call(this, username, email);
+    this.role = role;
+}
+
+Admin.prototype = Object.create(User.prototype);
+
+const userThree = new Admin('kurta', 'kurta@proto.co.ug', 'black-belt-ninja');
+
+Admin.prototype.deleteUser = function(user) {
+    users = users.filter(u => u.username !== user.username);
+    console.log(`${user.username} has been deleted.`);
+}
+
+let users = [userOne, userTwo, userThree];
+
+userThree.deleteUser(userTwo);
+
+console.log(users);
