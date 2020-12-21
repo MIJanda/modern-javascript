@@ -5,20 +5,26 @@ class User {
         this.score = 0;
     }
 
-    login () {
+    login() {
         console.log(`${this.username} just logged in...`);
         return this;
     }
 
-    logout () {
+    logout() {
         console.log(`${this.username} just logged out...`);
         return this;
     }
 
-    incScore () {
+    incScore() {
         this.score++;
         console.log(`${this.username} has a score of ${this.score}`);
         return this;
+    }
+}
+
+class Admin extends User {
+    deleteUser(user) {
+        users = users.filter(u => u.username !== user.username);
     }
 }
 
@@ -27,3 +33,13 @@ userOne.login().incScore().incScore().logout();
 
 const userTwo = new User('luigi', 'luigi@classes.co.ug');
 userTwo.login().incScore().logout();
+
+const userThree = new Admin('kurta', 'kurta@classes.co.ug');
+
+let users = [userOne, userTwo, userThree];
+
+console.log(users);
+
+userThree.deleteUser(userOne);
+
+console.log(users);
