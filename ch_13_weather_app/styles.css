@@ -8,3 +8,11 @@ body {
     max-width: 500px;
     margin: 0 auto;
 }
+
+.icon {
+    position: relative;
+    top: -50px;
+    border-radius: 50%;
+    width: 100px;
+    margin-bottom: -50px;
+}
