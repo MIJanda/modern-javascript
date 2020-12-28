@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <!-- The core Firebase JS SDK is always required and must be listed first -->
+       <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+
+       <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+       <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+       <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+   
+   
+       <script>
+           // Your web app's Firebase configuration
+           // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+           var firebaseConfig = {
+               apiKey: "AIzaSyCvzSMN6_X0A_j_ZshzWsyJU7FaXc419yA",
+               authDomain: "modern-javascript-e3b8d.firebaseapp.com",
+               projectId: "modern-javascript-e3b8d",
+               storageBucket: "modern-javascript-e3b8d.appspot.com",
+               messagingSenderId: "1086622197915",
+               appId: "1:1086622197915:web:e85496eaaea45b3d4afe3e",
+               measurementId: "G-JDJJZ46SPW"
+           };
+           // Initialize Firebase
+           firebase.initializeApp(firebaseConfig);
+           firebase.analytics();
+   
+           const db = firebase.firestore();
+       </script>
+</body>
+</html>
